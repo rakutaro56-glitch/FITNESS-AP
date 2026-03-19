@@ -18,7 +18,7 @@ export default function App() {
   const ce = useRef(null);
   useEffect(()=>{ce.current?.scrollIntoView({behavior:"smooth"});},[msgs]);
   const SYS = "あなたはプロのパーソナルトレーナーです。日本語で300文字以内で回答してください。";
-  const send = async(text) => {
+  const send = async(text: string) => {
     if(!text.trim()||loading) return;
     const next=[...msgs,{role:"user",text}];
     setMsgs(next);setLoading(true);
