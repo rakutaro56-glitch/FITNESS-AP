@@ -1,7 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 
-async function callAPI(messages, system) {
+async function callAPI(messages: any[], system: string) {
   const res = await fetch("/api/chat", {
     method: "POST",
     headers: { "content-type": "application/json" },
