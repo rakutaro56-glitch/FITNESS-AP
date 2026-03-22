@@ -1,4 +1,4 @@
-H"use client";
+use client";
 import { useState, useRef, useEffect } from "react";
 
 async function callAPI(messages: any[], system: string) {
