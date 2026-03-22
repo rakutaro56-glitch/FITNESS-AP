@@ -1,4 +1,4 @@
-"use client";
+H"use client";
 import { useState, useRef, useEffect } from "react";
 
 async function callAPI(messages: any[], system: string) {
@@ -23,7 +23,7 @@ export default function App() {
     const next=[...msgs,{role:"user",text}];
     setMsgs(next);setLoading(true);
     try{const h=next.map(m=>({role:m.role==="ai"?"assistant":"user",content:m.text}));const r=await callAPI(h,SYS);setMsgs(p=>[...p,{role:"ai",text:r}]);}
-    atch(e){setMsgs(p=>[...p,{role:"ai",text:"エラー: "+(e as Error).message}]);}
+    catch(e){setMsgs(p=>[...p,{role:"ai",text:"エラー: "+(e as Error).message}]);}
     setLoading(false);
   };
   return (
