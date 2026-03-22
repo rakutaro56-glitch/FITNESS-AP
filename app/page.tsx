@@ -15,7 +15,7 @@ export default function App() {
   const [msgs, setMsgs] = useState([{role:"ai",text:"こんにちは！AIパーソナルトレーナーです。何でも聞いてください。"}]);
   const [inp, setInp] = useState("");
   const [loading, setLoading] = useState(false);
-  const ce = useRef(null);
+  const ce = useRef<HTMLDivElement>(null);
   useEffect(()=>{ce.current?.scrollIntoView({behavior:"smooth"});},[msgs]);
   const SYS = "あなたはプロのパーソナルトレーナーです。日本語で300文字以内で回答してください。";
   const send = async(text: string) => {
